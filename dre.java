@@ -7,9 +7,11 @@ public class dre {public class UC1 {public class UC1 {
 			System.out.println("present");
 		else 
 			System.out.println("absent");
+		
 	}
 }
 UC1.java(end)
 
 
-}
+}System.out.println("absent");
+
