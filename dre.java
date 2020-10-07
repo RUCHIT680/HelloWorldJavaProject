@@ -1,22 +1,24 @@
 
-public class dre  {
-	public static void main(string[] args) {
-		int FULL_TIME = 1;
-		emprate/hr = 20;
-		int emphrs = 0;
-		int empwage = 0;
-		
-		double empcheck = Math.floor(Math.random() * 10) % 2;
-		if (empcheck == FULL_TIME)
-			emphrs = 8;
-		else emphrs = 0;
-		empwage = emphrs * emprate/hr;
-		
-		
-			System.out.println( " empwage = +emp rate/hr ");
-		
-	}
-}
-UC1.java(end)
+package EmployeeWageCode;
 
+public class UC2 {
+	static final int full_time = 1;
+	static final int wage_per_hour = 20;
+
+	public static void main(String[] args) {
+		int emphours = 0;
+		int empwage = 0;
+
+		int empcheck = (int) Math.floor(Math.random()*10)%2;
+		if (empcheck == full_time)
+			emphours = 8;
+		else
+			emphours = 0;
+		empwage = emphours*wage_per_hour;
+		System.out.println("Daily Employee Wage :" +empwage);
+
+	}
+
+
+}
 
