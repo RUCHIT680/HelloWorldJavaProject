@@ -1,33 +1,29 @@
 
-public class dre {
-	public static final int PART_TIME = 1;
-	public static final int FULL_TIME = 2;
-	public static final int emprate/hr = 20;
-	public static void main(string[] args) {
-		int emphrs = 0;
-	  int empwage = 0;
-		int PART_TIME = 1;
-		int FULL_TIME = 2;
-		int emprate/hr = 20;
-		int emphrs = 0;
-		
-		
-		int empcheck = (int) Math.floor(Math.random() * 10) % 3;
+package EmployeeWageCode;
+
+public class UC4 {
+	static final int full_time = 1;
+	static final int wage_per_hour = 20;
+	static final int part_time = 2;
+
+	public static void main(String[] args) {
+		int emphours = 0;
+		int empwage = 0;
+
+		int empcheck = (int) Math.floor(Math.random()*10)%3;
 		switch (empcheck) {
-		case PART_TIME:
-			emphrs = 4;
+		case full_time:
+			emphours = 8;
 			break;
-		case PART_TIME:
-			emphrs = 8;
+		case part_time:
+			emphours = 8;
 			break;
-			default:
-				emphrs = 0;
-		} 
-	empwage = emphrs * emprate/hr;
-		system.out.println("emp wage :" + empwage);
-}
-}
-		 uc4. end
-		
+		default:
+			emphours = 0;
+			break;
+		}
+		empwage = emphours*wage_per_hour;
+		System.out.println("Daily Employee Wage :" +empwage);
+	}	
 
-
+}
