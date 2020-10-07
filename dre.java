@@ -1,42 +1,40 @@
 
-public class dre {
-	public static final int PART_TIME = 1;
-	public static final int FULL_TIME = 2;
-	public static final int emprate/hr = 20;
-	public static final int no_of_working_days = 2;
-	public static final int max_hrs_in_a_month = 10;
-	
-	
-	public static void main(string[] args) {
-		int emphrs = 0, total emphrs = 0, totalworkingdays = 0;
-		
-	
-	while (totalemphrs <= max_hrs_in_a_month && totalworkingdays < no_of_working_days)
-	{ totalworkingdays++;
-	
-		
-		int empcheck = (int) Math.floor(Math.random() * 10) % 3;
-		switch (empcheck) {
-		case PART_TIME:
-			emphrs = 4;
-			break;
-		case PART_TIME:
-			emphrs = 8;
-			break;
-			default:
-				emphrs = 0;
+package EmployeeWageCode;
+
+public class UC6 {
+	static final int full_time = 1;
+	static final int wage_per_hour = 20;
+	static final int part_time = 2;
+	static final int no_of_working_days = 20;
+	static final int max_working_hours_inmonth = 100;
+
+	public static void main(String[] args) {
+		int emphours = 0;
+		int totalemphours = 0;
+		int totalempwage = 0;
+		int totalworkingdays = 0;
+
+
+		while (totalemphours <= max_working_hours_inmonth && totalworkingdays < no_of_working_days) {
+
+			totalworkingdays ++;
+
+			int empcheck = (int) Math.floor(Math.random()*10)%3;
+
+			if (empcheck == full_time)
+				emphours = 8;
+			else if (empcheck == part_time)
+				emphours = 8;
+			else
+				emphours = 0;
+
+			totalemphours += emphours;
+			System.out.println("Days: "+totalworkingdays +" Employee Hours: "+totalemphours);
 		}
-		totalemphrs += emphrs;
-				
-		
-		
-		system.out.println("day#:" + totalworkingdays + "emphr: " +emphrs);
-}
-	int totalempwage = totalemphrs * emprate/hr;
-	system.out.println("total emp wage: " + totalempwage);
+
+			totalempwage = totalemphours*wage_per_hour;
+			System.out.println("Total Emp Wage: " + totalempwage);
+
 	}
-		
-}uc6. end
-		
 
-
+}
