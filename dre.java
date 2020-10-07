@@ -1,38 +1,31 @@
+package EmployeeWageCode;
 
-public class dre {
-	public static final int PART_TIME = 1;
-	public static final int FULL_TIME = 2;
-	public static final int emprate/hr = 20;
-	public static final int no_of_working_days = 2;
-	
-	public static void main(string[] args) {
-		int emphrs = 0;
-	   int empwage = 0;
-	total empwage = 0;
-	for (int day = 0; day < no_of_working_days; day++)
-	{ 
-		
-		int empcheck = (int) Math.floor(Math.random() * 10) % 3;
-		switch (empcheck) {
-		case PART_TIME:
-			emphrs = 4;
-			break;
-		case PART_TIME:
-			emphrs = 8;
-			break;
-			default:
-				emphrs = 0;
+public class UC5 {
+	static final int full_time = 1;
+	static final int wage_per_hour = 20;
+	static final int part_time = 2;
+	static final int no_of_working_days = 20;
+
+	public static void main(String[] args) {
+		int emphours = 0;
+		int empwage = 0;
+		int totalempwage = 0;
+		for (int i = 0; i<no_of_working_days; i++) {
+
+			int empcheck = (int) Math.floor(Math.random()*10)%3;
+
+			if (empcheck == full_time)
+				emphours = 8;
+			else if (empcheck == part_time)
+				emphours = 8;
+			else
+				emphours = 0;
+			empwage = emphours*wage_per_hour;
+			totalempwage += empwage;
+			System.out.println("Emp Wage: " + empwage);
 		}
-		empwage = emphrs * emprate/hr;
-				total empwage += empwage;
-		
-		
-		system.out.println("emp wage :" + empwage);
-}
-	system.out.println("empwage: " + empwage);
+		System.out.println("Total Employee Wage :" +totalempwage);
+
 	}
-		
-}uc5. end
-		
 
-
+}
